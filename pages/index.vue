@@ -1,13 +1,11 @@
 <script setup lang='ts'>
 definePageMeta({
-  layout: 'default'
+  colorMode: 'light',
 })
 </script>
 
 <template>
-  <LadingPage/>
+    <LandingPage />
 </template>
 
-<style>
-
-</style>
+<style></style>

@@ -1,10 +1,13 @@
 <script setup lang='ts'>
-
+definePageMeta({
+  colorMode: 'light',
+})
 </script>
 
 <template>
-<Navbar/>
-<slot/>
+<div>
+  <!-- <slot/> -->
+</div>
 </template>
 
 <style>
