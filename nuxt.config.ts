@@ -13,7 +13,7 @@ export default defineNuxtConfig({
       theme: {
         fontFamily: {
           'sans': ['Lato', 'sans-serif'],
-          'serif': ['Monserrat', 'serif'],
+          'serif': ['Montserrat', 'serif'],
         },
         extend: {
           colors: {

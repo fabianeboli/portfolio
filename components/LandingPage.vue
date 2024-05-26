@@ -18,13 +18,13 @@ const downloadFile = () => {
   <div>
     <Navbar />
   </div>
-  <section class="flex justify-around">
+  <section class="flex justify-around h-screen">
     <div class="flex justify-center gap-x-44">
       <section class="flex flex-col text-center xl:text-5xl w-full ml-28 mt-32">
-          <h1 class="text-7xl mb-10">Fabian Eboli</h1>
+          <h1 class="text-7xl mb-10 font-serif">Fabian Eboli</h1>
           <h2 class="text-3xl">Software Developer</h2>
       </section>
-      <section class="flex text-xl flex-col leading-7 relative right-52 w-[1100px] bg-gray-50 p-4 rounded-md drop-shadow-md shadow-gray-500 text-tertiary">
+      <section class="flex text-xl flex-col leading-7 relative right-52 h-fit w-[1100px] bg-gray-50 p-4 rounded-md drop-shadow-md shadow-gray-500 text-tertiary">
         <p class="mb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. At augue eget arcu dictum varius. Malesuada proin libero nunc consequat interdum varius sit
           amet. Dictum fusce ut placerat orci nulla pellentesque dignissim. Vehicula ipsum a arcu cursus vitae.
