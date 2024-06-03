@@ -8,6 +8,7 @@ definePageMeta({
   <div class="font-sans">
     <LandingPage />
     <Features/>
+    <Projects/>
   </div>
 </template>
 

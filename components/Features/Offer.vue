@@ -11,7 +11,7 @@ const { title, items, price } = defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col w-full h-full pt-8 pb-9 px-5">
+  <div class="flex flex-col w-full h-full pt-8 pb-9 px-8">
     <h1 class="text-2xl font-serif text-main my-6 text-center ml-1">{{ title }}</h1>
     <ul class="flex flex-col gap-y-3 px-20"
       :class="{ 'border-l-2 border-l-gray-300': borderLeft, 'border-r-2 border-r-gray-300': borderRight }">

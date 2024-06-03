@@ -1,11 +1,13 @@
-import { theme } from './.nuxt/types/tailwind.config.d';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  typescript: {
+    typeCheck: true
+  },
   app: {
     pageTransition: { name: 'slide-right', mode: 'out-in' }
   },
   devtools: { enabled: true },
-  modules: ['nuxt-icon', "@nuxt/ui", "@nuxtjs/i18n"],
+  modules: ['nuxt-icon', "@nuxt/ui", "@nuxtjs/i18n", "nuxt-swiper"],
   tailwindcss: {
     exposeConfig: true,
     viewer: true,
