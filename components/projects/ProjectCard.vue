@@ -1,8 +1,9 @@
 <script setup lang='ts'>
 import { type IProject } from '~/utils/types';
 
-const { id, title, description, image, technologies, link, repository, demo, videoLink } = defineProps<IProject>();
+const { id, title, description, image, technologies, link, repository, demo, videoLink, isSwiper } = defineProps<IProject & { isSwiper: boolean }>();
 const router = useRouter();
+
 
 const shortenTechnologies = (technologies: string[]) => {
   const joinedTechnologies = technologies.join(", ");
@@ -21,10 +22,10 @@ const openLink = (path: string) => {
 </script>
 <template>
   <div
-    class="bg-gray-50 rounded-sm drop-shadow-lg shadow-sm shadow-gray-300 w-80 px-5 py-2 flex flex-auto flex-col justify-between items-center">
+    class="bg-gray-50 rounded-sm drop-shadow-md shadow-md shadow-gray-400 h-[98%] w-[400px] px-5 py-2 flex flex-col self-stretch justify-between items-center" :class="{'flex-auto !w-80': !isSwiper}">
     <div class="container w-full h-64 rounded-md overflow-hidden mb-2"
-      :class="{ 'hover:scale-110 duration-300 hover:shadow-md': image, ' bg-gray-100': !image }">
-      <img class=" h-full object-cover " :src="image" aria-label="Project image" />
+      :class="{ 'hover:scale-110 duration-300 hover:shadow-md': image, 'bg-gray-100': !image }">
+      <img class="h-full object-cover" :src="image" aria-label="Project image" />
     </div>
     <div class="flex gap-x-1 text-lg justify-center">
       <h1 class="text-2xl font-semibold text-main mr-2"> {{ title }} </h1>
@@ -47,6 +48,7 @@ const openLink = (path: string) => {
     </h2>
     <button
       class="text-emerald-100 sm:text-sm text-md bg-emerald-700 rounded-md shadow-md hover:bg-emerald-800 hover:text-emerald-50 duration-300 transition-all font-semibold hover:shadow-none px-5 py-1.5 mt-5 mb-3"
+      :class="{ '!px-6 py-2 !text-md tracking-wider': isSwiper }"
       @click="() => router.push('/projects/' + id)">Details</button>
   </div>
 </template>

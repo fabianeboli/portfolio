@@ -8,7 +8,7 @@ definePageMeta({
   <div class="font-sans">
     <LandingPage />
     <Features/>
-    <Projects/>
+    <Projects :is-swiper="true"/>
   </div>
 </template>
 

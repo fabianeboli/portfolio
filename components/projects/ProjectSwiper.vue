@@ -6,24 +6,24 @@ import { projectsData } from '../../composables/projectsData';
 </script>
 
 <template>
-  <Swiper :auto-height="true" :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperPagination]" :slides-per-view="2"
-    :pagination="{
+  <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperPagination]" :slides-per-view="1"
+    :useSlideoverflow="true" :pagination="{
       clickable: true,
-      
     }" :loop="true" :effect="'creative'" :autoplay="{
       delay: 8000,
       disableOnInteraction: true
     }" :creative-effect="{
-        prev: {
-          shadow: false,
-          translate: ['-20%', 0, -1]
-        },
-        next: {
-          translate: ['100%', 0, 0]
-        }
-      }">
+      prev: {
+        shadow: false,
+        translate: ['-80%', 0, -1]
+      },
+      next: {
+        shadow: false,
+        translate: ['80%', 0, 0]
+      },
+    }">
     <SwiperSlide v-for="project in projectsData" :key="project.id">
-      <ProjectCard :id="project.id" :key="project.id" :title="project.title" :description="project.description"
+      <ProjectCard :is-swiper="true" :id="project.id" :key="project.id" :title="project.title" :description="project.description"
         :image="project.image" :technologies="project.technologies" :link="project.link"
         :repository="project.repository" :demo="project.demo" :video-link="project.videoLink" />
     </SwiperSlide>
@@ -31,33 +31,47 @@ import { projectsData } from '../../composables/projectsData';
   </Swiper>
 </template>
 
-<style >
+<style>
 .swiper-slide {
+  /* height: auto !important; */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  height: 20vh;
+  /* font-size: 18px;
+  height: 500px !important;
   font-size: 4rem;
-  font-weight: bold;
+  font-weight: bold; */
+  height: auto !important;
+  /* @apply flex justify-center items-stretch h-full w-full; */
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper {
   min-width: 100vh;
   width: 100vh;
 }
 
 .swiper-cards {
-  width: 240px;
-  height: 240px;
+  width: 100%;
+  min-height: 100%;
+} */
+
+.swiper-cards {
+  align-self: stretch !important;
 }
 
 .swiper-cards .swiper-slide {
-  border-radius: 6px;
-  border: 1px solid black;
+  /* border-radius: 6px; */
+  /* border: 1px solid black; */
+  /* @apply drop-shadow-md shadow-sm; */
 }
 
 .swiper-pagination-bullet-active {
   @apply !bg-emerald-600;
+}
+
+.swiper-pagination-bullets {
+  position: initial !important;
+  margin-top: 1em;
+ 
 }
 </style>
