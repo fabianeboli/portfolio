@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import EmailForm from '~/components/Contact/EmailForm.vue';
+
 definePageMeta({
   colorMode: 'light',
 })
@@ -9,6 +11,7 @@ definePageMeta({
     <LandingPage />
     <Features/>
     <Projects :is-swiper="true"/>
+    <EmailForm/>
   </div>
 </template>
 

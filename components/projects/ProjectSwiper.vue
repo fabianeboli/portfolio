@@ -15,11 +15,11 @@ import { projectsData } from '../../composables/projectsData';
     }" :creative-effect="{
       prev: {
         shadow: false,
-        translate: ['-80%', 0, -1]
+        translate: ['-100%', 0, -1]
       },
       next: {
         shadow: false,
-        translate: ['80%', 0, 0]
+        translate: ['100%', 0, 0]
       },
     }">
     <SwiperSlide v-for="project in projectsData" :key="project.id">

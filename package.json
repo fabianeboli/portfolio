@@ -16,6 +16,7 @@
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.11.2",
     "nuxt-icon": "^0.6.10",
+    "nuxt-mail": "^5.0.1",
     "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",
     "swiper": "^11.1.4",

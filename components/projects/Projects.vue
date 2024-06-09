@@ -8,7 +8,7 @@ const { isSwiper } = defineProps<{ isSwiper: boolean }>();
 
 <template>
   <div  class="">
-    <div v-if="isSwiper" class="mx-52 h-screen relative top-28">
+    <div v-if="isSwiper" class="mx-52 mb-40 h-full relative top-28">
       <ProjectSwiper/>
     </div>
     <ul v-else class="flex justify-around lg:gap-x-16 xl:gap-x-5 gap-y-10 flex-wrap lg:mx-52 ">
