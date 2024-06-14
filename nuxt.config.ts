@@ -13,12 +13,13 @@ export default defineNuxtConfig({
       to: process.env.EMAIL_TO,
     },
     smtp: {
-      host: 'mail.protonmail.ch',
+      host: process.env.SMTP_HOST,
       port: 587,
+      secure: false, // Use `true` for port 465, `false` for all other ports
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-      }
+        user: process.env.SMTP_AUTH_USER,
+        pass: process.env.SMTP_AUTH_PASS,
+      },
     },
   }],],
   tailwindcss: {

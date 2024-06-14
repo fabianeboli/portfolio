@@ -19,16 +19,16 @@ const router = useRouter();
     <div>
       <Navbar />
     </div>
-    <section class="flex justify-around">
-      <div class="flex justify-center gap-x-44 w-full">
-        <section class="flex flex-col text-center xl:text-5xl w-full ml-28 mt-24">
-          <h1 class="text-7xl mb-10 font-serif">Fabian Eboli</h1>
+    <section class="">
+      <div class="flex justify-center gap-x-40 w-[80%] mx-auto mt-[5%]">
+        <section class="flex flex-col text-center xl:text-5xl w-full mt-24">
+          <h1 class="text-7xl mb-20 font-serif">Fabian Eboli</h1>
           <h2 class="text-3xl">Software Developer</h2>
           <span @click="() => router.push('/#offer')" class="mt-20 my-animation-bounce text-quaternary opacity-50 cursor-pointer"><Icon size="1.25em" name="ic:baseline-arrow-drop-down"/></span>
         </section>
         <section
-          class="flex text-xl flex-col leading-7 relative right-52 h-fit w-[1100px] bg-gray-50 p-4 rounded-md drop-shadow-md shadow-gray-500 text-tertiary">
-          <p class="mb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          class="flex text-xl flex-col md:w-[800px] xl:w-[1100px] 2xl:w-[800px] bg-gray-50 p-4 rounded-md drop-shadow-md shadow-gray-500 text-tertiary">
+          <p class="mb-20 leading-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
             labore et dolore
             magna aliqua. At augue eget arcu dictum varius. Malesuada proin libero nunc consequat interdum varius sit
             amet. Dictum fusce ut placerat orci nulla pellentesque dignissim. Vehicula ipsum a arcu cursus vitae.
