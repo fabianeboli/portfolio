@@ -10,7 +10,7 @@ export interface IProject {
   videoLink?: string
 }
 
-export interface ISkills {
+export interface ISkill {
   name: string,
   icon: string,
 };

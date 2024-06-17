@@ -11,11 +11,15 @@ const items = () => {
 <template>
   <div>
     <UButton
-      class="text-emerald-700 bg-transparent hover:bg-transparent hover:drop-shadow-lg hover:drop-shadow-emerald-200 font-bold border-2 rounded-full border-emerald-700 drop-shadow-lg shadow-emerald-200"
-      label="" slide="left" trailing-icon="i-heroicons-bars-3-20-solid" @click="isSliderOpen = true" />
+      class="text-white hover:bg-emerald-800 hover:drop-shadow-lg hover:drop-shadow-emerald-200 font-bold border-2 rounded-full border-emerald-700 bg-emerald-700 drop-shadow-lg"
+      label="" slide="left" size="lg" trailing-icon="i-heroicons-bars-3-20-solid" @click="isSliderOpen = true" />
 
-    <USlideover v-model="isSliderOpen">
-      <UCard class="flex main-content flex-col flex-1 text-main"
+      <!-- <UButton
+      class="text-emerald-700 bg-transparent hover:bg-transparent hover:drop-shadow-lg hover:drop-shadow-emerald-200 font-bold border-2 rounded-full border-emerald-700 drop-shadow-lg shadow-emerald-200"
+      label="" slide="left" trailing-icon="i-heroicons-bars-3-20-solid" @click="isSliderOpen = true" /> -->
+
+    <USlideover class="!w-1/2 lg:w-full"  v-model="isSliderOpen">
+      <UCard class="flex  main-content flex-col flex-1 text-main"
         :ui="{ body: { base: '!px-0' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
         <template #header>
           <div class="flex justify-between items-center mx-1">

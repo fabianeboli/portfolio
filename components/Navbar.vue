@@ -14,7 +14,7 @@
         </span>
       </div>
 
-      <div class="flex justify-end  gap-x-10 text-xl mr-10">
+      <!-- <div class="flex justify-end gap-x-10 text-xl mr-10">
         <nav aria-label="Page navigation"
           class="flex flex-col bg-gray-50 rounded-full px-7 py-1.5 drop-shadow-md shadow-gray-100 text-gray-400 ">
           <ul class="flex gap-x-4">
@@ -48,7 +48,7 @@
             </li>
           </ul>
         </nav>
-      </div>
+      </div> -->
 
     </div>
   </div>

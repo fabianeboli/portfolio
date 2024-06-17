@@ -89,7 +89,7 @@ const isValidMessage = (message: string): boolean => {
 </script>
 
 <template>
-  <form class="flex text-md flex-col justify-center gap-y-6" action="POST">
+  <form class="flex text-md flex-col justify-center gap-y-6 xl:scale-125" action="POST">
     <div class="relative">
       <input name="email"
         class="text-secondary w-full border-b-2 hover:border-cyan-600 shadow-inner outline-none bg-gray-50 py-1.5 px-2 hover:shadow-[inset_0_9px_20px_-14px_rgba(0,0,0,0.45)] duration-500 rounded-sm"

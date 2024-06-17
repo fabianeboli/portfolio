@@ -4,7 +4,7 @@ import EmailForm from './EmailForm.vue';
 </script>
 
 <template>
-<div class="flex flex-col xl:flex-row xl:justify-center xl:gap-x-[30rem] mt-[300px]">
+<div class="flex flex-col xl:flex-row xl:justify-center xl:gap-x-[50rem] mt-96 mb-52">
   <ContactInfo/>
   <EmailForm/>
 </div>

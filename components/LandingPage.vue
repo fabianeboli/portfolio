@@ -3,7 +3,7 @@ definePageMeta({
   layout: 'default'
 })
 
-const downloadFile = () => {
+const downloadCV = () => {
   const link = document.createElement('a');
   link.href = '/Fabian_Eboli_CV.pdf';
   link.download = 'Fabian Eboli - CV.pdf';
@@ -15,31 +15,34 @@ const router = useRouter();
 </script>
 
 <template>
-  <div class="h-screen">
-    <div>
+  <div>
+
+     <div class=" md:h-screen">
+    <div class="video-container">
+    <video autoplay loop muted class="fullscreen-bg-video ">
+      <source src="/projectVideos/854053-hd_1920_1080_25fps_background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+    <div >
       <Navbar />
     </div>
     <section class="">
-      <div class="flex justify-center gap-x-40 w-[80%] mx-auto mt-[5%]">
-        <section class="flex flex-col text-center xl:text-5xl w-full mt-24">
-          <h1 class="text-7xl mb-20 font-serif">Fabian Eboli</h1>
-          <h2 class="text-3xl">Software Developer</h2>
-          <span @click="() => router.push('/#offer')" class="mt-20 my-animation-bounce text-quaternary opacity-50 cursor-pointer"><Icon size="1.25em" name="ic:baseline-arrow-drop-down"/></span>
+      <div class="flex flex-col xl:flex-row justify-center gap-x-80 w-[80%] mx-auto mt-[10%]">
+        <section class="flex flex-col text-center xl:text-5xl mt-24">
+          <h1 class="text-6xl xl:text-8xl mb-20 font-serif font-bold text-white drop-shadow-lg">Fabian Eboli</h1>
+          <h2 class="text-4xl text-emerald-500 font-serif font-bold drop-shado-sm">Software Developer</h2>
+          <span @click="() => router.push('/#offer')" class="mt-20 my-animation-bounce text-white/80 cursor-pointer drop-shadow-md text-6xl md:text-md"><Icon size="1.25em" name="ic:baseline-arrow-drop-down"/></span>
         </section>
         <section
-          class="flex text-xl flex-col md:w-[800px] xl:w-[1100px] 2xl:w-[800px] bg-gray-50 p-4 rounded-md drop-shadow-md shadow-gray-500 text-tertiary">
-          <p class="mb-20 leading-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore
-            magna aliqua. At augue eget arcu dictum varius. Malesuada proin libero nunc consequat interdum varius sit
-            amet. Dictum fusce ut placerat orci nulla pellentesque dignissim. Vehicula ipsum a arcu cursus vitae.
-            Tristique senectus et netus et malesuada fames ac turpis. Nibh tortor id aliquet lectus proin nibh nisl
-            condimentum. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. A arcu cursus vitae
-            congue mauris. Quisque id diam vel quam elementum. Urna cursus eget nunc scelerisque viverra mauris in
-            aliquam. Eu augue ut lectus arcu bibendum at varius vel.</p>
-          <button @click="downloadFile"
+          class="flex text-xl flex-col md:w-[800px] xl:w-[1100px] 2xl:w-[700px]  bg-gray-200 p-4 rounded-sm drop-shadow-lg shadow-gray-500 text-secondary text-justify">
+          <p class="mb-20 leading-7 mx-2">As a software developer, I would like to depict my work on my portfolio website, which also serves as a platform for my business. While I am passionate about creating innovative solutions. My portfolio website features a diverse range of projects that demonstrate my skills and expertise. I understand that software development is a rapidly evolving field, and I am committed to staying up-to-date with the latest technologies and best practices. Whether you're looking for a reliable software developer or a trusted business partner, I invite you to explore my portfolio website and see how I can contribute to your success. I am grateful for the opportunities I have had and look forward to continuing to grow and deliver high-quality software solutions</p>
+          <button @click="downloadCV"
             class="flex justify-end items-center gap-x-0.5 cursor-pointer font-semibold text-emerald-700 duration-500 hover:text-emerald-500">Download
             CV
-            <Icon name="mdi:download" />
+            <Icon class="mt-1" name="mdi:download" />
           </button>
         </section>
       </div>
@@ -48,9 +51,72 @@ const router = useRouter();
 
   </div>
 
+
+
+  </div>
+
+ 
 </template>
 
-<style scoped> 
+<style scoped>
+.typingEffect {
+    width: 0;
+    overflow: hidden; /* Ensure the text is not visible until the typewriter effect*/
+    border-right: 2px solid white; /* The cursor*/
+    font-size: 16px;
+    white-space: nowrap; /* Keeps the text on a single line */
+    animation: typing 2s forwards;
+  }
+
+/* The typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+.video-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -20;
+  height: 105vh;
+  
+}
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 21, 21, 0.6);
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.fullscreen-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 .my-animation-bounce {
   animation: bounce 3s infinite ease-in-out;
 

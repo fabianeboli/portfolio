@@ -3,12 +3,11 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true
   },
-
   app: {
     pageTransition: { name: 'slide-right', mode: 'out-in' }
   },
   devtools: { enabled: true },
-  modules: ['nuxt-icon', "@nuxt/ui", "@nuxtjs/i18n", "nuxt-swiper", ['nuxt-mail', {
+  modules: ['nuxt-icon', "@nuxt/ui", "@nuxtjs/i18n", "nuxt-swiper", 'nuxt-lazy-load', ['nuxt-mail', {
     message: {
       to: process.env.EMAIL_TO,
     },

@@ -9,10 +9,16 @@ definePageMeta({
 <template>
   <div class="font-sans">
     <LandingPage />
-    <Features/>
-    <Projects :is-swiper="true"/>
-    <Contact/>
+    <Features />
+    <Projects :is-swiper="true" />
+    <SkillsArticle/>
+    <Contact />
+    <Footer />
   </div>
 </template>
 
-<style></style>
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
