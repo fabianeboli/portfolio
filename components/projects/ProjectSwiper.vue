@@ -31,7 +31,12 @@ import { projectsData } from '../../composables/projectsData';
   </Swiper>
 </template>
 
-<style>
+<style scoped>
+.swiper {
+  width: 100% !important;
+}
+
+
 .swiper-slide {
   /* height: auto !important; */
   display: flex;
@@ -45,6 +50,12 @@ import { projectsData } from '../../composables/projectsData';
   /* @apply flex justify-center items-stretch h-full w-full; */
 }
 
+@media (max-width: 768px) {
+  .swiper-slide {
+    height: auto !important;
+    flex-direction: column;
+  }
+}
 /* .swiper-wrapper {
   min-width: 100vh;
   width: 100vh;

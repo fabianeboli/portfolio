@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 const mail = useMail();
-
+let isMobile = false;
 const sender = ref<string>("");
 const message = ref<string>("");
 
@@ -14,6 +14,7 @@ const loader = ref<boolean>(false);
 const isEmailSent = ref<boolean>(false);
 
 onMounted(() => {
+  isMobile = window.screen.width < 768;
   if (localStorage.getItem("emailSentAt")) {
     const emailSentAt = Number(localStorage.getItem("emailSentAt"));
     const now = new Date();
@@ -42,15 +43,12 @@ const sendMail = async () => {
       text: message.value,
     });
 
-    console.log("Email sent");
     isEmailSent.value = true;
     localStorage.setItem('emailSentAt', Date.now().toString());
     message.value = "";
     sender.value = "";
-
-
-    loader.value = false;
   }
+  loader.value = false;
 }
 
 const isValidEmail = (email: string) => {
@@ -89,7 +87,7 @@ const isValidMessage = (message: string): boolean => {
 </script>
 
 <template>
-  <form class="flex text-md flex-col justify-center gap-y-6 xl:scale-125" action="POST">
+  <form class="flex text-md flex-col justify-center gap-y-6 xl:scale-125 mx-10 relative sm:sticky bottom-12 sm:bottom-0 sm:mx-0" action="POST">
     <div class="relative">
       <input name="email"
         class="text-secondary w-full border-b-2 hover:border-cyan-600 shadow-inner outline-none bg-gray-50 py-1.5 px-2 hover:shadow-[inset_0_9px_20px_-14px_rgba(0,0,0,0.45)] duration-500 rounded-sm"
@@ -107,11 +105,8 @@ const isValidMessage = (message: string): boolean => {
 
       <p v-if="isErrorMessage" class="text-red-500 text-sm font-bold absolute bottom-96 right-2"> {{ errorMessage }}
       </p>
-      
-      
 
-      <div class="flex justify-between mx-4 gap-x-2 relative bottom-12">
-
+      <div class="flex flex-col sm:flex-row justify-between mx-0 sm:mx-4 gap-x-2 gap-y-7 sm:gap-y-0 static mt-5 sm:mt-0 sm:relative bottom-12">
         <div class="flex gap-x-3" :class="{ 'invisible': isEmailSent }">
           <UButton @click="message = template1" variant="soft" color="emerald">
             Template 1
@@ -124,12 +119,12 @@ const isValidMessage = (message: string): boolean => {
           </UButton>
         </div>
 
-        <UButton @click="message = ''" class="text-md relative left-2 xl:left-2" :class="{'invisible': isEmailSent}" variant="ghost"
+        <UButton @click="message = ''" :block="isMobile" class="text-md relative left-0 sm:left-2 xl:left-2" :class="{'invisible': isEmailSent}" :variant="isMobile ? 'soft' : 'ghost'"
           color="cyan">
           <Icon class="" name="jam:rubber" />
         </UButton>
 
-        <UButton @click="sendMail" class="text-md"
+        <UButton @click="sendMail" class="text-md" :block="isMobile"
           :class="{ 'text-slate-50 bg-emerald-700 cursor-not-allowed duration-1000 pointer-events-none': isEmailSent }"
           variant="soft" color="violet"> {{ isEmailSent ? "Sent" : "Send" }}
           <Icon v-if="isEmailSent" class="ml-2" name="mdi:check" />

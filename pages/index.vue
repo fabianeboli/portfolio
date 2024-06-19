@@ -11,7 +11,7 @@ definePageMeta({
     <LandingPage />
     <Features />
     <Projects :is-swiper="true" />
-    <SkillsArticle/>
+    <SkillsArticle />
     <Contact />
     <Footer />
   </div>

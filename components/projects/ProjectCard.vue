@@ -22,7 +22,8 @@ const openLink = (path: string) => {
 </script>
 <template>
   <div
-    class="bg-gray-50 rounded-sm drop-shadow-md shadow-md shadow-gray-400 h-[98%] w-[400px] px-5 py-2 flex flex-col self-stretch justify-between items-center" :class="{'flex-auto !w-80': !isSwiper}">
+    class="bg-gray-50 rounded-sm drop-shadow-md shadow-md shadow-gray-400 h-[98%] w-[300px] sm:w-[400px] px-5 py-2 flex flex-col self-stretch justify-between items-center"
+    :class="{ 'flex-auto !w-80': !isSwiper }">
     <div class="container w-full h-64 rounded-md overflow-hidden mb-2"
       :class="{ 'hover:scale-110 duration-300 hover:shadow-md': image, 'bg-gray-100': !image }">
       <img class="h-full object-cover" :src="image" aria-label="Project image" />

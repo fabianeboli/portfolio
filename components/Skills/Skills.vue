@@ -23,10 +23,9 @@ const items = [{
 }
 ];
 </script>
-<!-- mx-[30%] mt-[12.5%] -->
 <template>
-  <div class="">
-    <UAccordion color="emerald" variant="solid" size="xl" :items="items">
+  <div>
+    <UAccordion class="w-[80vw] sm:w-full" color="emerald" variant="solid" size="xl" :items="items">
       <template #item="{ item }">
         <p class="italic text-gray-900 dark:text-white text-center">
           {{ item.description }}
@@ -36,7 +35,6 @@ const items = [{
       <template #frontend>
         <div class="text-gray-900 dark:text-white text-center">
           <Logo class="w-auto h-8 mx-auto" />
-
           <div class="flex flex-wrap justify-center gap-8 my-5">
             <Skill v-for="image in frontendData" :name="image.name" :icon="image.icon" />
           </div>
@@ -46,7 +44,6 @@ const items = [{
       <template #backend>
         <div class="text-gray-900 dark:text-white text-center">
           <Logo class="w-auto h-8 mx-auto" />
-
           <div class="flex flex-wrap justify-center gap-8 my-5">
             <Skill v-for="image in backendData" :name="image.name" :icon="image.icon" />
           </div>
@@ -56,7 +53,6 @@ const items = [{
       <template #databases>
         <div class="text-gray-900 dark:text-white text-center">
           <Logo class="w-auto h-8 mx-auto" />
-
           <div class="flex flex-wrap justify-center gap-8 my-5">
             <Skill v-for="image in databasesData" :name="image.name" :icon="image.icon" />
           </div>
@@ -66,7 +62,6 @@ const items = [{
       <template #tools>
         <div class="text-gray-900 dark:text-white text-center">
           <Logo class="w-auto h-8 mx-auto" />
-
           <div class="flex flex-wrap justify-center gap-8 my-5">
             <Skill v-for="image in toolsData" :name="image.name" :icon="image.icon" />
           </div>
