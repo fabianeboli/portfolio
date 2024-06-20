@@ -6,6 +6,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'slide-right', mode: 'out-in' }
   },
+  i18n: {
+    vueI18n: './i18n.config.ts' // if you are using custom path, default
+  },
   devtools: { enabled: true },
   modules: ['nuxt-icon', "@nuxt/ui", "@nuxtjs/i18n", "nuxt-swiper", 'nuxt-lazy-load', ['nuxt-mail', {
     message: {

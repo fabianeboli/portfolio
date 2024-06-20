@@ -8,13 +8,10 @@ const { isSwiper } = defineProps<{ isSwiper: boolean }>();
 
 <template>
   <div class="">
-    <div v-if="isSwiper" class="mb-40 h-full relative xl:left-40 top-32 mt-16 flex flex-col sm:flex-row justify-around flex-auto   mx-10 sm:mx-40">
-      <div>
-        <h1 class="text-7xl mb-10 sm:mb-20 font-bold font-seriff text-main relative mark">Projects</h1>
-        <p class="text-tertiary text-xl leading-9 text-justify">Here are some of my projects. I have been working on a variety of
-          projects to enhance my skills and contribute to the tech community. Each project has allowed me to explore
-          different technologies, improve my problem-solving abilities, and collaborate with other developers. I will
-          continue expanding my project list with innovative ideas and impactful solutions</p>
+    <div v-if="isSwiper" class="mb-40 h-full relative xl:left-40 top-32 mt-16 flex flex-col sm:flex-row justify-center mx-10 sm:mx-40">
+      <div class="sm:flex-[75%]">
+        <h1 class="text-7xl mb-10 sm:mb-20 font-bold font-seriff text-main relative mark">{{ $t('projects.title') }}</h1>
+        <p class="text-tertiary text-xl leading-9 text-justify sm:mr-20"> {{ $t('projects.article') }} </p>
       </div>
       <ProjectSwiper />
     </div>

@@ -8,15 +8,8 @@
       <Skills />
     </div>
     <article class="flex-1">
-      <h1 class="text-7xl font-bold font-seriff text-main relative text-end mark mb-10 sm:mb-24">Skills</h1>
-      <p class="text-tertiary text-xl leading-9 text-justify mb-16 sm:mb-0">As a programmer, I have developed a wide range of skills in software
-        development. From problem-solving to collaboration, I have honed my abilities in various programming languages
-        and frameworks. I am proficient in languages such as Python, JavaScript, and Java, and have experience with
-        popular frameworks like React, Vue.js, and Spring Boot. My programming skills include writing clean, efficient
-        code, working effectively with version control systems, and collaborating with team members to deliver
-        high-quality software solutions. While I take pride in my technical expertise, I also recognize the importance
-        of continuous learning and staying up-to-date with the latest trends and best practices in the field. I am
-        committed to staying adaptable and continuously improving my skills to meet the evolving needs of technology.
+      <h1 class="text-7xl font-bold font-seriff text-main relative text-end mark mb-10 sm:mb-24">${{ $t('skills.title') }}</h1>
+      <p class="text-tertiary text-xl leading-9 text-justify mb-16 sm:mb-0"> ${{ $t('skills.article') }}
       </p>
     </article>
   </div>

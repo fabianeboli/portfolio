@@ -17,7 +17,7 @@ const { title, items, price } = defineProps<{
       :class="{ 'sm:border-l-2 sm:border-l-gray-300': borderLeft, 'sm:border-r-2 sm:border-r-gray-300': borderRight }">
       <li class="text-tertiary" v-for="item in items" :key="item"> {{ item }} </li>
     </ul>
-    <h2 class="text-2xl font-bold text-main text-center mt-10 ml-3"> {{ price }} zł</h2>
+    <h2 class="text-2xl font-bold text-main text-center mt-10 ml-3"> {{ $t('features.price') }} {{ $t('features.currency') }}</h2>
   </div>
 </template>
 
