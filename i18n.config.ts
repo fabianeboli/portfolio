@@ -103,6 +103,21 @@ export default defineI18nConfig(() => ({
         title: 'Contact',
         contentEmail: 'Enter your email',
         contentPlaceholder: 'Enter your message',
+        errorMessages: {
+          tooShort: "Too short",
+          tooLong: "Too long",
+          required: "Required",
+          invalidEmail: "Invalid email",
+        },
+        templates: {
+          template1: "Hello, my name is XYZ and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance.",
+          template2: "Hello, my name is XYZ2 and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance.",
+          template3: "Hello, my name is XYZ3 and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance."
+        },
+        submitButton: {
+          send: 'Send',
+          sent: "Sent",
+        } 
       }
     },
     pl: {
@@ -199,6 +214,21 @@ export default defineI18nConfig(() => ({
         title: 'Kontakt',
         emailPlaceholder: 'Podaj swój e-mail',
         contentPlaceholder: 'Wpisz swoją wiadomość',
+        errorMessages: {
+          tooShort: "Zbyt krótki",
+          tooLong: "Za długi",
+          required: "Wymagane",
+          invalidEmail: "Invalid email",
+        },
+        templates: {
+          template1: "Witam, nazywam się XYZ i chciałbym Cię zatrudnić. Jestem zainteresowany współpracą. Szukam stanowiska na poziomie podstawowym. Z góry dziękuję.",
+          template2: "Witam, nazywam się XYZ2 i chciałbym Pana/Panią zatrudnić. Jestem zainteresowany współpracą. Szukam stanowiska na poziomie podstawowym. Z góry dziękuję.",
+          template3: "Witam, nazywam się XYZ3 i chciałbym Pana/Panią zatrudnić. Jestem zainteresowany współpracą. Szukam stanowiska na poziomie podstawowym. Z góry dziękuję."
+        },
+        submitButton: {
+          send: 'Wyślij',
+          sent: "Wysłane",
+        } 
       },
     },
     it: {
@@ -297,6 +327,21 @@ export default defineI18nConfig(() => ({
         title: 'Contatto',
         emailPlaceholder: `Inserire l'e-mail`,
         contentPlaceholder: 'Scrivere i contenuti',
+         errorMessages: {
+          tooShort: "Troppo corto",
+          tooLong: "Troppo lungo",
+          required: "Richiesto",
+          invalidEmail: "Email non valida",
+        },
+        templates: {
+          template1: "Salve, mi chiamo XYZ e vorrei assumerla. Sono interessato a lavorare con lei. Sto cercando una posizione entry level. Grazie in anticipo",
+          template2: "Salve, mi chiamo XYZ2 e vorrei assumerla. Sono interessato a lavorare con lei. Sono alla ricerca di una posizione entry level. Grazie in anticipo",
+          template3: "Salve, mi chiamo XYZ3 e vorrei assumerla. Sono interessato a lavorare con lei. Sto cercando una posizione entry level. Grazie in anticipo",
+        },
+        submitButton: {
+          send: 'Invia',
+          inviato: "Inviato",
+        } 
       },
     }
   }

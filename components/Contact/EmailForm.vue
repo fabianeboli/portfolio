@@ -1,4 +1,5 @@
 <script setup lang='ts'>
+const { t } = useI18n();
 const mail = useMail();
 let isMobile = false;
 const sender = ref<string>("");
@@ -26,11 +27,7 @@ onMounted(() => {
     }
   }
 })
-
-const template1 = "Hello, my name is XYZ and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance."
-const template2 = "Hello2, my name is XYZ and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance."
-const template3 = "Hello3, my name is XYZ and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance."
-
+const templates = [t("contact.templates.template1"), t("contact.templates.template2"), t("contact.templates.template3")];
 const sendMail = async () => {
   loader.value = true;
   const isEmailValid = isValidEmail(sender.value);
@@ -39,7 +36,7 @@ const sendMail = async () => {
   if (isEmailValid && isMessageValid) {
     await mail.send({
       sender: sender.value,
-      subject: 'Contract - ' + sender.value,
+      subject: 'Potencjalne zlecenie - ' + sender.value,
       text: message.value,
     });
 
@@ -56,7 +53,7 @@ const isValidEmail = (email: string) => {
 
   if (!emailRegex.test(email)) {
     isErrorSender.value = true;
-    errorSender.value = "Invalid email";
+    errorSender.value = t("contact.invalidEmail");
     return false;
   }
 
@@ -73,10 +70,10 @@ const isValidMessage = (message: string): boolean => {
   }
 
   if (message.length < 50) {
-    return errorHelper("Message too short");
+    return errorHelper(t("contact.messageTooShort"));
   }
   else if (message.length > 500) {
-    return errorHelper("Message too long");
+    return errorHelper(t("contact.messageTooLong"));
   }
 
   isErrorMessage.value = false;
@@ -108,13 +105,13 @@ const isValidMessage = (message: string): boolean => {
 
       <div class="flex flex-col sm:flex-row justify-between mx-0 sm:mx-4 gap-x-2 gap-y-7 sm:gap-y-0 static mt-5 sm:mt-0 sm:relative bottom-12">
         <div class="flex gap-x-3" :class="{ 'invisible': isEmailSent }">
-          <UButton @click="message = template1" variant="soft" color="emerald">
+          <UButton @click="message = templates[0]" variant="soft" color="emerald">
             Template 1
           </UButton>
-          <UButton @click="message = template2" variant="soft" color="emerald">
+          <UButton @click="message = templates[1]" variant="soft" color="emerald">
             Template 2
           </UButton>
-          <UButton @click="message = template3" variant="soft" color="emerald">
+          <UButton @click="message = templates[2]" variant="soft" color="emerald">
             Template 3
           </UButton>
         </div>
@@ -126,7 +123,7 @@ const isValidMessage = (message: string): boolean => {
 
         <UButton @click="sendMail" class="text-md" :block="isMobile"
           :class="{ 'text-slate-50 bg-emerald-700 cursor-not-allowed duration-1000 pointer-events-none': isEmailSent }"
-          variant="soft" color="violet"> {{ isEmailSent ? "Sent" : "Send" }}
+          variant="soft" color="violet"> {{ isEmailSent ? t('contact.submitButton.sent') : t('contact.submitButton.send') }}
           <Icon v-if="isEmailSent" class="ml-2" name="mdi:check" />
           <Icon v-else-if="loader" class="ml-2 animate-spin" name="mdi:loading" />
           <Icon v-else class="ml-2" name="mdi:send" />
