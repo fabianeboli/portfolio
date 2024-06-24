@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-definePageMeta({
-  colorMode: 'light',
-})
+// definePageMeta({
+//   colorMode: 'light',
+// })
 </script>
 
 <template>

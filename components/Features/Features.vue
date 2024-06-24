@@ -9,15 +9,15 @@ const items3 = [t('features.offer3.item1'), t('features.offer3.item2')];
 
 <template>
   <div class="w-full sm:h-[600px] bg-gray-300 px-10 relative backgroundGradient">
-    <div class="flex justify-center items-center relative top-20">
+    <div class="flex justify-center items-center relative top-24 mx-20 xl:mx-80">
       <ul id="offer"
-        class="flex flex-col sm:flex-row bg-gray-50 rounded-lg drop-shadow-lg shadow-sm shadow-gray-300 xl:scale-110">
+        class="flex flex-col sm:flex-row bg-gray-50 rounded-lg drop-shadow-lg shadow-sm shadow-gray-300 dark:shadow-gray-900 xl:scale-110">
         <Offer :title="$t('features.offer1.title')"
-          :items="items1" price="100" />
-        <Offer :title="$t('features.offer2.title')" :items="items2" price="800"
+          :items="items1" :price="$t('features.offer1.price')" />
+        <Offer :title="$t('features.offer2.title')" :items="items2" :price="$t('features.offer2.price')"
           borderLeft borderRight />
         <Offer :title="$t('features.offer3.title')" :items="items3"
-          price="2000" />
+          :price="$t('features.offer3.price')" />
       </ul>
     </div>
     <!-- <Button 

@@ -87,7 +87,7 @@ const isValidMessage = (message: string): boolean => {
   <form class="flex text-md flex-col justify-center gap-y-6 xl:scale-125 mx-10 relative sm:sticky bottom-12 sm:bottom-0 sm:mx-0" action="POST">
     <div class="relative">
       <input name="email"
-        class="text-secondary w-full border-b-2 hover:border-cyan-600 shadow-inner outline-none bg-gray-50 py-1.5 px-2 hover:shadow-[inset_0_9px_20px_-14px_rgba(0,0,0,0.45)] duration-500 rounded-sm"
+        class="text-secondary dark:text-slate-900 dark:placeholder:text-gray-400 w-full border-b-2 hover:border-cyan-600 shadow-inner outline-none bg-gray-50 dark:bg-gray-300 py-1.5 px-2 hover:shadow-[inset_0_9px_20px_-14px_rgba(0,0,0,0.45)] duration-500 rounded-sm"
         @keydown="isErrorSender = false"
         :class="{ 'border-red-500 hover:border-red-500 hover:bg-red-500/10': isErrorSender, '!bg-slate-600/25 hover:border-transparent': isEmailSent }"
         type="text" placeholder="email" v-model="sender" :disabled="isEmailSent">
@@ -96,7 +96,7 @@ const isValidMessage = (message: string): boolean => {
 
     <div class="relative">
       <textarea name="message"
-        class="text-secondary text-md w-full pt-1.5 pb-80 px-2 shadow-[inset_0_9px_20px_-15px_rgba(0,0,0,0.3)] outline-none hover:shadow-[inset_0_9px_20px_-14px_rgba(0,0,0,0.45)] duration-500 bg-gray-50 text-md rounded-sm"
+        class="text-secondary dark:text-slate-900 dark:placeholder:text-gray-400 text-md w-full pt-1.5 pb-80 px-2 shadow-[inset_0_9px_20px_-15px_rgba(0,0,0,0.3)] outline-none hover:shadow-[inset_0_9px_20px_-14px_rgba(0,0,0,0.45)] duration-500 bg-gray-50 dark:bg-gray-300 text-md rounded-sm"
         :class="{ 'outline-red-500 outline-2 hover:border-red-500 hover:bg-red-600/15': isErrorMessage, '  !bg-slate-600/25': isEmailSent }"
         v-model="message" @keydown="isErrorMessage = false" placeholder="content" :disabled="isEmailSent"> </textarea>
 

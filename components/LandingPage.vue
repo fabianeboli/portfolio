@@ -39,10 +39,10 @@ const downloadCV = () => {
             </span>
           </section>
           <section
-            class="flex text-xl flex-col w-[105%] md:w-[800px] xl:w-[1100px] 2xl:w-[700px] relative top-8 mb-24 md:mb-0 bg-gray-200 p-4 rounded-sm drop-shadow-lg shadow-gray-500 text-secondary text-justify">
-            <p class="mb-20 leading-7 mx-2">{{ $t('landingPage.article') }}</p>
+            class="flex text-xl flex-col w-[105%] md:w-[800px] xl:w-[1100px] 2xl:w-[700px] relative top-8 mb-24 md:mb-0 bg-gray-200 dark:bg-gray-800 p-4 rounded-sm drop-shadow-lg shadow-gray-500 text-secondary dark:text-slate-50 text-justify">
+            <p class="mb-20 leading-7 mx-2 text-secondary dark:text-slate-200">{{ $t('landingPage.article') }}</p>
             <button @click="downloadCV"
-              class="flex justify-end items-center gap-x-0.5 cursor-pointer font-semibold text-emerald-700 duration-500 hover:text-emerald-500">{{ $t('landingPage.downloadCV') }}
+              class="flex justify-end items-center gap-x-0.5 cursor-pointer font-semibold text-emerald-700 dark:text-emerald-600 duration-500 hover:text-emerald-500 dark:hover:text-emerald-400">{{ $t('landingPage.downloadCV') }}
               <Icon class="mt-1" name="mdi:download" />
             </button>
           </section>

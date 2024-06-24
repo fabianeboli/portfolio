@@ -1,9 +1,9 @@
 <script setup lang='ts'>
 import Contact from '~/components/Contact/Contact.vue';
 
-definePageMeta({
-  colorMode: 'light',
-})
+// definePageMeta({
+//   colorMode: 'light',
+// })
 </script>
 
 <template>

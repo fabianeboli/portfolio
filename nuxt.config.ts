@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'slide-right', mode: 'out-in' }
   },
+  colorMode: {
+    classSuffix: '',
+    preference: 'system'
+  },
   i18n: {
     vueI18n: './i18n.config.ts' // if you are using custom path, default
   },
@@ -35,16 +39,29 @@ export default defineNuxtConfig({
         },
         extend: {
           colors: {
-            'main': '#212121',
-            'secondary': '#424242',
-            'tertiary': '#616161',
-            'quaternary': '#757575',
+            'main': {
+              light: '#212121',
+              DEFAULT: '#212121',
+              dark: '#FEFEFE',
+            }, 
+            'secondary': {
+              light: '#424242',
+              DEFAULT: '#424242',
+              dark: '#ff0',
+            },
+            'tertiary': {
+              light: '#616161',
+              DEFAULT: '#616161',
+              dark: '#f00',
+            },
+            'quaternary': {
+              light: '#757575',
+              DEFAULT: '#757575',
+              dark: '#f0f',
+            },
           }
         }
       },
     },
-  },
-  colorMode: {
-    preference: "system",
   },
 })

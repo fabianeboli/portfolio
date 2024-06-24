@@ -67,9 +67,7 @@ const items = [{
           </div>
         </div>
       </template>
-
     </UAccordion>
-
   </div>
 </template>
 

@@ -32,7 +32,6 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: '30',
-          currency: 'EUR',
           priceInfo: "per component"
         },
         offer2: {
@@ -43,7 +42,6 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: 'From 100',
-          currency: 'EUR',
         },
         offer3: {
           title: 'Store',
@@ -53,8 +51,8 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: 'From 500',
-          currency: 'EUR',
-        }
+        },
+        currency: 'zł',
       },
       projects: {
         title: 'Projects',
@@ -146,7 +144,6 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: '120',
-          currency: 'zł',
           priceInfo: "za komponent"
         },
         offer2: {
@@ -157,7 +154,6 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: 'od 400',
-          currency: 'zł',
         },
         offer3: {
           title: 'Sklep',
@@ -167,8 +163,8 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: 'od 1500',
-          currency: 'zł',
-        }
+        },
+        currency: 'zł',
       },
       projects: {
         title: 'Projekty',
@@ -257,7 +253,6 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: '30',
-          currency: 'EUR',
           priceInfo: "per component"
         },
         offer2: {
@@ -268,7 +263,6 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: 'Da 100',
-          currency: 'EUR',
         },
         offer3: {
           title: 'Negozio',
@@ -278,8 +272,8 @@ export default defineI18nConfig(() => ({
           item4: 'item4',
           item5: 'item5',
           price: 'Da 500',
-          currency: 'EUR',
-        }
+        },
+        currency: 'EUR',
       },
       projects: {
         title: 'Progetti',
