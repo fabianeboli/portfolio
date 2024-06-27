@@ -1,15 +1,14 @@
 <script setup lang='ts'>
 const { setLocale } = useI18n();
 const colorMode = useColorMode()
-
 const isSliderOpen = ref<boolean>(false);
 const isLanguageOpen = ref<boolean>(false);
 const switchTheme = ref<boolean>(colorMode.preference === 'dark');
 
 const toggleTheme = () => {
-  console.log(colorMode.value, colorMode.value === 'light');
   switchTheme.value = !switchTheme.value;
   colorMode.value = switchTheme.value ? 'dark' : 'light';
+  colorMode.preference = switchTheme.value ? 'dark' : 'light';
 }
 
 const selectLanguage = (locale: string) => {
@@ -22,7 +21,7 @@ const selectLanguage = (locale: string) => {
 <template>
   <div>
     <UButton
-      class="text-white dark:text-white hover:bg-emerald-800 hover:drop-shadow-lg hover:drop-shadow-emerald-200 font-bold border-2 rounded-full border-emerald-700 bg-emerald-700 drop-shadow-lg fixed z-50 top-5 sm:static"
+      class="text-white dark:text-white hover:bg-emerald-800 hover:drop-shadow-lg hover:drop-shadow-emerald-200 font-bold border-2 rounded-full border-emerald-700 bg-emerald-700 drop-shadow-lg fixed z-50 top-5 sm:relative"
       label="" slide="left" size="lg" trailing-icon="i-heroicons-bars-3-20-solid" @click="isSliderOpen = true" />
 
     <!-- <UButton
@@ -35,9 +34,11 @@ const selectLanguage = (locale: string) => {
         <template #header>
           <div class="flex justify-between items-center mx-1">
             <div class="flex items-center">
-              <Icon name="material-symbols:light-mode-outline" class="text-secondary dark:text-yellow-300 mr-2" size="1.7em" />
+              <Icon name="material-symbols:light-mode-outline" class="text-secondary dark:text-yellow-300 mr-2"
+                size="1.7em" />
               <UToggle v-model="switchTheme" @click="toggleTheme" color="teal" size="lg" />
-              <Icon name="material-symbols:dark-mode-outline" class="text-secondary dark:text-amber-600 ml-2" size="1.7em" />
+              <Icon name="material-symbols:dark-mode-outline" class="text-secondary dark:text-amber-600 ml-2"
+                size="1.7em" />
 
             </div>
             <h1 class="font-semibold text-2xl dark:text-white mr-20">Menu</h1>
@@ -47,7 +48,14 @@ const selectLanguage = (locale: string) => {
           </div>
         </template>
         <div>
-          <ul class="flex bg-white dark:bg-gray-800 dark:text-slate-100 hover:dark:text-white text-xl flex-col gap-y-10 text-center">
+          <ul
+            class="flex bg-white dark:bg-gray-900 dark:text-slate-100 hover:dark:text-white text-xl flex-col gap-y-10 text-center">
+
+            <NuxtLink to="/projects/1">
+              <li class="border-b-2 border-b-gray-100 pb-2 hover:text-gray-700 hover:border-b-emerald-500">Projects
+              </li>
+            </NuxtLink>
+
             <!-- <li class="border-b-2 border-b-gray-100 pb-2 hover:text-gray-700 hover:border-b-emerald-500">
               <NuxtLink to="/offer">Offer</NuxtLink>
             </li>
@@ -60,7 +68,8 @@ const selectLanguage = (locale: string) => {
             <li class="border-b-2 border-b-gray-100 pb-2 hover:text-gray-700 hover:border-b-emerald-500">
               <NuxtLink to="/skills">Skills</NuxtLink>
             </li> -->
-            <li class="border-b-2 border-b-gray-100 hover:text-gray-700 hover:dark:text-slate-200 hover:border-b-emerald-500 h-10"
+            <li
+              class="border-b-2 border-b-gray-100 hover:text-gray-700 hover:dark:text-slate-200 hover:border-b-emerald-500 h-10"
               @click="isLanguageOpen = !isLanguageOpen">
 
               <p class="grid grid-cols-3 items-center cursor-pointer">
@@ -69,9 +78,9 @@ const selectLanguage = (locale: string) => {
                 <Icon name="ion:language" size="" color="" />
               </div>
 
-              <Icon class="col-start-3 justify-self-end mr-7"
+              <Icon class="col-start-3 justify-self-end mr-7 text-white !dark:text-white"
                 :class="{ 'rotate-180 duration-200': isLanguageOpen, 'rotate-0 duration-200': !isLanguageOpen }"
-                name="ion:chevron-down" size="" color="#212121" />
+                name="ion:chevron-down" size=""  />
 
               </p>
               <Transition name="slide">

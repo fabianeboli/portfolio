@@ -5,7 +5,6 @@ export const projectsData: IProject[] = [
     description: "Implementation of Social Network inspired by Facebook. Users' passwords are encrypted. Accounts are authorized by tokens. Current functionalities are: creating accounts, writing and liking posts and comments, searching other user profiles, adding, accepting, and removing friends from the friends list, and using chat.",
     image: "/projectImages/clonebook.png",
     technologies: [Technology.TypeScript, Technology.React, Technology.Redux, Technology.GraphQL, Technology.Node, Technology.Express, Technology.Mongo, Technology.Moongose, Technology.StyledComponents, Technology.Supertest, Technology.Bcrypt, Technology.Jwt],
-    link: "https://google.com",
     repository: "https://github.com/fabianeboli/facebook-clone",
     demo: "https://facebook-clone-production-ef75.up.railway.app/"
   },
@@ -14,7 +13,7 @@ export const projectsData: IProject[] = [
     title: "ChatApp",
     description: "An application that enables users to chat chatrooms. Upon creating a new account, users can create a new chatroom or join an existing one. If the chatroom is owned by the user, it is possible also to edit it or delete it.",
     image: "/projectImages/chat_app.png",
-    videoLink: "/projectVideos/chat_app.mp4",
+    videoLink: "/projectVideos/ChatApp.mp4",
     technologies: [Technology.TypeScript, Technology.React, Technology.Reactstrap, Technology.Redux, Technology.ASP_NET, Technology.EntityFramework, Technology.Bcrypt, Technology.PostgreSQL, Technology.Jwt],
     repository: "https://github.com/fabianeboli/chatroom-netcore",
   },

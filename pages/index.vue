@@ -1,9 +1,5 @@
 <script setup lang='ts'>
 import Contact from '~/components/Contact/Contact.vue';
-
-// definePageMeta({
-//   colorMode: 'light',
-// })
 </script>
 
 <template>
@@ -22,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 
-
+/* 
 .page-enter-active,
 .page-leave-active {
   transition: all 0.4s;
@@ -31,7 +27,7 @@ html {
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
-}
+} */
 
 
 </style>

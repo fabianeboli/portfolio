@@ -1,18 +1,16 @@
 <script setup lang='ts'>
 definePageMeta({
-  layout: 'custom',
+  layout: 'project',
+  colorMode: 'system',
 })
 
 import { useProjects } from '~/composables/useProjects';
 
 const { params } = useRoute();
-const projects = useProjects();
+await navigateTo('/projects/1')
 </script>
 
 <template>
   TO BE REDIRECTED
 </template>
 
-<style scoped>
-
-</style>

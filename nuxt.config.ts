@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     typeCheck: true
   },
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'slide-right', mode: 'out-in' },
+    layoutTransition: { name: 'slide-right', mode: 'out-in' },
     
   },
   colorMode: {
