@@ -1,28 +1,23 @@
 <script setup lang='ts'>
 import Offer from './Offer.vue';
 const { t } = useI18n();
-const items1 = [t('features.offer1.item1'), t('features.offer1.item2')];
-const items2 = [t('features.offer2.item1'), t('features.offer2.item2')];
-const items3 = [t('features.offer3.item1'), t('features.offer3.item2')];
+
+const items = { firstOffer: [t('features.offer1.item1'), t('features.offer1.item2')], secondOffer: [t('features.offer2.item1'), t('features.offer2.item2')], thirdOffer: [t('features.offer3.item1'), t('features.offer3.item2')] };
 
 </script>
 
 <template>
-  <div class="w-full sm:h-[600px] bg-gray-300 px-10 relative backgroundGradient">
+  <div class="w-full xl:h-[600px] bg-gray-300 px-10 relative backgroundGradient">
     <div class="flex justify-center items-center relative top-24 mx-20 xl:mx-80">
       <ul id="offer"
-        class="flex flex-col sm:flex-row bg-gray-50 rounded-lg drop-shadow-lg shadow-sm shadow-gray-300 dark:shadow-gray-900 xl:scale-110">
-        <Offer :title="$t('features.offer1.title')"
-          :items="items1" :price="$t('features.offer1.price')" />
-        <Offer :title="$t('features.offer2.title')" :items="items2" :price="$t('features.offer2.price')"
-          borderLeft borderRight />
-        <Offer :title="$t('features.offer3.title')" :items="items3"
-          :price="$t('features.offer3.price')" />
+        class="flex flex-col xl:flex-row bg-gray-50 rounded-lg drop-shadow-lg shadow-sm shadow-gray-300 dark:shadow-gray-900 xl:scale-110">
+        <Offer :title="$t('features.offer1.title')" :items="items.firstOffer" :price="$t('features.offer1.price')" />
+        <Offer :title="$t('features.offer2.title')" :items="items.secondOffer" :price="$t('features.offer2.price')" borderLeft
+          borderRight />
+        <Offer :title="$t('features.offer3.title')" :items="items.thirdOffer" :price="$t('features.offer3.price')" />
       </ul>
     </div>
-    <!-- <Button 
-      class="text-gray-400 font-semibold absolute bottom-0 right-0 mb-4 mr-0 sm:mr-4 text-right text-lg sm:text-2xl">Contact me <Icon name="mdi:chevron-right" />
-    </Button> -->
+
   </div>
 </template>
 

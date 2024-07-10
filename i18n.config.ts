@@ -1,5 +1,3 @@
-import Contact from "./components/Contact/Contact.vue";
-
 export default defineI18nConfig(() => ({
   legacy: false,
   lazy: true,
@@ -17,7 +15,7 @@ export default defineI18nConfig(() => ({
               staying up-to-date with the latest technologies and best practices. Whether you're looking for a reliable
               software developer or a trusted business partner, I invite you to explore my portfolio website and see how
               I can contribute to your success. I am grateful for the opportunities I have had and look forward to
-              continuing to grow and deliver high-quality software solutions`,
+              continuing to grow and deliver high-quality software solutions.`,
         downloadCV: `Download CV`
       },
       slide: {
@@ -26,8 +24,8 @@ export default defineI18nConfig(() => ({
       features: {
         offer1: {
           title: 'Component',
-          item1: 'I will create or modify components',
-          item2: 'Time of delivery largery depends on the complexity of the task and amount of components',
+          item1: 'I will create or modify components.',
+          item2: 'Time of delivery largery depends on the complexity of the task and amount of components.',
           item3: 'item3',
           item4: 'item4',
           item5: 'item5',
@@ -36,8 +34,8 @@ export default defineI18nConfig(() => ({
         },
         offer2: {
           title: 'Website',
-          item1: 'I will create or modify a website, including design',
-          item2: 'Time of delivery largery depends on the complexity of the task',
+          item1: 'I will create or modify a website, including design.',
+          item2: 'Time of delivery largery depends on the complexity of the task.',
           item3: 'item3',
           item4: 'item4',
           item5: 'item5',
@@ -45,8 +43,8 @@ export default defineI18nConfig(() => ({
         },
         offer3: {
           title: 'Store',
-          item1: 'I will create store, including design',
-          item2: 'Time of delivery largery depends on the complexity of the task',
+          item1: 'I will create store, including design.',
+          item2: 'Time of delivery largery depends on the complexity of the task.',
           item3: 'item3',
           item4: 'item4',
           item5: 'item5',
@@ -71,7 +69,7 @@ export default defineI18nConfig(() => ({
         },
         project3: {
           title: 'Lights out',
-          description: 'An implementation of the electronic game in which player must toggle adjacent lights until all of them switched off',
+          description: 'An implementation of the electronic game in which player must toggle adjacent lights until all of them switched off.',
         },
         project4: {
           title: 'HealthBlockchain',
@@ -102,15 +100,20 @@ export default defineI18nConfig(() => ({
         contentEmail: 'Enter your email',
         contentPlaceholder: 'Enter your message',
         errorMessages: {
-          tooShort: "Too short",
-          tooLong: "Too long",
-          required: "Required",
-          invalidEmail: "Invalid email",
+          tooShort: "Too short.",
+          tooLong: "Too long.",
+          required: "Required.",
+          invalidEmail: "Invalid email.",
+        },
+        templateNames: {
+          template1: "components template",
+          template2: "page template",
+          template3: "store template"
         },
         templates: {
-          template1: "Hello, my name is XYZ and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance.",
-          template2: "Hello, my name is XYZ2 and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance.",
-          template3: "Hello, my name is XYZ3 and I would like to hire you. I am interested in working with you. I am looking for an entry level position. Thank you in advance."
+          template1: "Good day,\nMy name is (first and last name) and I would like to hire you to extend my website with some components. The address of my site is: (website address).\n\nThe components I need are: (list of components).\n\Best regards,\n(first and last name)",
+          template2: "Good day,\n\nMy name is (first and last name) and I would like to hire you to create my website. The address of my site is: (website address).\n\ndetails  I need are: (list of components).\nBest regards,\n(first and last name)",
+          template3: "Good day,\n\nMy name is (first name and last name) and I would like to hire you to create a store for me. The name of the store would be (store name). I would like to it to have following features:\n(list of features).\n\nBest regards,\n(first and last name)"
         },
         submitButton: {
           send: 'Send',
@@ -138,8 +141,8 @@ export default defineI18nConfig(() => ({
       features: {
         offer1: {
           title: 'Komponent',
-          item1: 'Stworze lub zmodyfikuję dla Ciebie komponenty Twojej strony',
-          item2: 'Czas pracy jest zależny od zlożoności zadania i liczby komponentów',
+          item1: 'Stworze lub zmodyfikuję dla Ciebie komponenty Twojej strony.',
+          item2: 'Czas pracy jest zależny od zlożoności zadania i liczby komponentów.',
           item3: 'item3',
           item4: 'item4',
           item5: 'item5',
@@ -148,8 +151,8 @@ export default defineI18nConfig(() => ({
         },
         offer2: {
           title: 'Strona',
-          item1: 'Stworzę lub zmodyfikuję stronę, wraz z projektem strony',
-          item2: 'Time of delivery largery depends on the complexity of the task',
+          item1: 'Stworzę lub zmodyfikuję stronę, wraz z projektem strony.',
+          item2: 'Czas pracy jest zależny od zlożoności zadania i liczby komponentów.',
           item3: 'item3',
           item4: 'item4',
           item5: 'item5',
@@ -157,8 +160,8 @@ export default defineI18nConfig(() => ({
         },
         offer3: {
           title: 'Sklep',
-          item1: 'Stworzę sklep od zera, wraz z projektem sklepu',
-          item2: 'Time of delivery largery depends on the complexity of the task',
+          item1: 'Stworzę sklep od zera, wraz z projektem sklepu.',
+          item2: 'Czas pracy jest zależny od zlożoności zadania i liczby komponentów.',
           item3: 'item3',
           item4: 'item4',
           item5: 'item5',
@@ -216,10 +219,15 @@ export default defineI18nConfig(() => ({
           required: "Wymagane",
           invalidEmail: "Invalid email",
         },
+        templateNames: {
+          template1: "Szablon komponentów",
+          template2: "Szablon strony",
+          template3: "Szablon sklepu"
+        },
         templates: {
-          template1: "Witam, nazywam się XYZ i chciałbym Cię zatrudnić. Jestem zainteresowany współpracą. Szukam stanowiska na poziomie podstawowym. Z góry dziękuję.",
-          template2: "Witam, nazywam się XYZ2 i chciałbym Pana/Panią zatrudnić. Jestem zainteresowany współpracą. Szukam stanowiska na poziomie podstawowym. Z góry dziękuję.",
-          template3: "Witam, nazywam się XYZ3 i chciałbym Pana/Panią zatrudnić. Jestem zainteresowany współpracą. Szukam stanowiska na poziomie podstawowym. Z góry dziękuję."
+          template1: "Dzień dobry,\n\nnazywam się (imię i nazwisko) i chciałbym Pana zatrudnić w celu rozwinięcia mojej strony o kilka elementów. Adres mojej strony to: (adres strony). \n\n Z poważaniem,\n(imię i nazwisko)",
+          template2: "Dzień dobry,\n\nnazywam się (imię i nazwisko) i chciałbym Pana zatrudnić w celu stworzenia mojej strony. Projekt dotyczyłby (szczegóły strony) Jestem zainteresowany współpracą.\n\nZ poważaniem,\n(imię i nazwisko)",
+          template3: "Dzień dobry,\n\nnazywam się (imię i nazwisko) i chciałbym Pana zatrudnić w celu stworzenia sklepu. Projekt dotyczyłby (szczegóły strony).\n\nZ poważaniem,\n(imię i nazwisko)"
         },
         submitButton: {
           send: 'Wyślij',
@@ -238,7 +246,8 @@ export default defineI18nConfig(() => ({
               a rimanere aggiornato sulle ultime tecnologie e sulle migliori pratiche. Se siete alla ricerca di uno sviluppatore
               sviluppatore di software affidabile o di un partner commerciale fidato, vi invito a esplorare il mio sito web e a vedere come posso contribuire al vostro successo.
               come posso contribuire al vostro successo. Sono grato per le opportunità che ho avuto e non vedo l'ora di
-              continuare a crescere e a fornire soluzioni software di alta qualità`,
+              continuare a crescere e a fornire soluzioni software di alta qualità.
+              `,
         downloadCV: `Scarica CV`
       },
       slide: {
@@ -322,15 +331,15 @@ export default defineI18nConfig(() => ({
         emailPlaceholder: `Inserire l'e-mail`,
         contentPlaceholder: 'Scrivere i contenuti',
          errorMessages: {
-          tooShort: "Troppo corto",
-          tooLong: "Troppo lungo",
-          required: "Richiesto",
+          tooShort: "Troppo corto.",
+          tooLong: "Troppo lungo.",
+          required: "Richiesto.",
           invalidEmail: "Email non valida",
         },
         templates: {
-          template1: "Salve, mi chiamo XYZ e vorrei assumerla. Sono interessato a lavorare con lei. Sto cercando una posizione entry level. Grazie in anticipo",
-          template2: "Salve, mi chiamo XYZ2 e vorrei assumerla. Sono interessato a lavorare con lei. Sono alla ricerca di una posizione entry level. Grazie in anticipo",
-          template3: "Salve, mi chiamo XYZ3 e vorrei assumerla. Sono interessato a lavorare con lei. Sto cercando una posizione entry level. Grazie in anticipo",
+          template1: "Buongiorno,\n\nIl mio nome è (nome e cognome) e vorrei assumervi per ampliare il mio sito web con alcuni componenti. L'indirizzo del mio sito è: (indirizzo del sito web).\nI componenti di cui ho bisogno sono: (elenco dei componenti).\n\aSaluti, \n(nome e cognome)",
+          template2: "Buongiorno,\n\nIl mio nome è (nome e cognome) e vorrei assumerla per creare il mio sito web. L'indirizzo del mio sito è: (indirizzo del sito web).\nDettagli di cui ho bisogno sono: (elenco dei componenti).\nBuoni saluti,\n(nome e cognome)",
+          template3: "Buongiorno,\n\nmi chiamo (nome e cognome) e vorrei assumerla per creare un negozio per me. Il nome del negozio sarà (nome del negozio). Mi piacerebbe che avesse le seguenti caratteristiche:\n(elenco delle caratteristiche).\nBuoni saluti,\n(nome e cognome)"
         },
         submitButton: {
           send: 'Invia',

@@ -27,7 +27,7 @@ onMounted(() => {
     }
   }
 })
-const templates = [t("contact.templates.template1"), t("contact.templates.template2"), t("contact.templates.template3")];
+
 const sendMail = async () => {
   loader.value = true;
   const isEmailValid = isValidEmail(sender.value);
@@ -84,7 +84,9 @@ const isValidMessage = (message: string): boolean => {
 </script>
 
 <template>
-  <form class="flex text-md flex-col justify-center gap-y-6 xl:scale-125 mx-10 relative sm:sticky bottom-12 sm:bottom-0 sm:mx-0" action="POST">
+  <form
+    class="flex text-md flex-col justify-center gap-y-6 xl:scale-125 mx-10 relative sm:sticky bottom-12 sm:bottom-0 sm:mx-0"
+    action="POST">
     <div class="relative">
       <input name="email"
         class="text-secondary dark:text-slate-900 dark:placeholder:text-gray-400 w-full border-b-2 hover:border-cyan-600 shadow-inner outline-none bg-gray-50 dark:bg-gray-300 py-1.5 px-2 hover:shadow-[inset_0_9px_20px_-14px_rgba(0,0,0,0.45)] duration-500 rounded-sm"
@@ -103,27 +105,29 @@ const isValidMessage = (message: string): boolean => {
       <p v-if="isErrorMessage" class="text-red-500 text-sm font-bold absolute bottom-96 right-2"> {{ errorMessage }}
       </p>
 
-      <div class="flex flex-col sm:flex-row justify-between mx-0 sm:mx-4 gap-x-2 gap-y-7 sm:gap-y-0 static mt-5 sm:mt-0 sm:relative bottom-12">
+      <div
+        class="flex flex-col sm:flex-row justify-between mx-0 sm:mx-4 gap-x-2 gap-y-7 sm:gap-y-0 static mt-5 sm:mt-0 sm:relative bottom-12">
         <div class="flex gap-x-3" :class="{ 'invisible': isEmailSent }">
-          <UButton @click="message = templates[0]" variant="soft" color="emerald">
+          <UButton @click="message = t('contact.templates.template1')" variant="soft" color="emerald">
             Template 1
           </UButton>
-          <UButton @click="message = templates[1]" variant="soft" color="emerald">
+          <UButton @click="message = t('contact.templates.template2')" variant="soft" color="emerald">
             Template 2
           </UButton>
-          <UButton @click="message = templates[2]" variant="soft" color="emerald">
+          <UButton @click="message = t('contact.templates.template3')" variant="soft" color="emerald">
             Template 3
           </UButton>
         </div>
 
-        <UButton @click="message = ''" :block="isMobile" class="text-md relative left-0 sm:left-2 xl:left-2" :class="{'invisible': isEmailSent}" :variant="isMobile ? 'soft' : 'ghost'"
-          color="cyan">
+        <UButton @click="message = ''" :block="isMobile" class="text-md relative left-0 sm:left-2 xl:left-2"
+          :class="{ 'invisible': isEmailSent }" :variant="isMobile ? 'soft' : 'ghost'" color="cyan">
           <Icon class="" name="jam:rubber" />
         </UButton>
 
         <UButton @click="sendMail" class="text-md" :block="isMobile"
           :class="{ 'text-slate-50 bg-emerald-700 cursor-not-allowed duration-1000 pointer-events-none': isEmailSent }"
-          variant="soft" color="violet"> {{ isEmailSent ? t('contact.submitButton.sent') : t('contact.submitButton.send') }}
+          variant="soft" color="violet"> {{ isEmailSent ? t('contact.submitButton.sent') :
+            t('contact.submitButton.send') }}
           <Icon v-if="isEmailSent" class="ml-2" name="mdi:check" />
           <Icon v-else-if="loader" class="ml-2 animate-spin" name="mdi:loading" />
           <Icon v-else class="ml-2" name="mdi:send" />

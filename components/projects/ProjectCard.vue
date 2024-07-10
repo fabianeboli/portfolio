@@ -31,7 +31,7 @@ const openLink = (path: string) => {
     <div class="flex gap-x-1 text-lg justify-center">
       <h1 class="text-2xl font-semibold text-main mr-2"> {{ title }} </h1>
       <button class="hover:scale-125 duration-300" v-if="link" @click="() => openLink(link!)">
-        <Icon name="mdi:source-branch" />"
+        <Icon name="mdi:source-branch" />
       </button>
       <button class="hover:scale-125 duration-300" v-if="repository" @click="() => openLink(repository!)">
         <Icon name="mdi:github" />
