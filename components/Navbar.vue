@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import { MenuType } from '~/types/enum';
+
 
 </script>
 
@@ -10,7 +12,7 @@
           <Menu />
         </span>
         <span v-if="true">
-          <Slide />
+          <Slide :menu-type="MenuType.Main" />
         </span>
       </div>
 
